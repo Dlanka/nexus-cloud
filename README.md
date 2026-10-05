@@ -1,77 +1,53 @@
-# 🚀 Nexus Cloud — SaaS & Financial Analytics Dashboard
+# 🚀 Multi-Step Workspace Onboarding Wizard
 
-[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Shadcn UI](https://img.shields.io/badge/Shadcn_UI-Components-000000?style=for-the-badge&logo=shadcnui&logoColor=white)](https://ui.shadcn.com/)
-[![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-6-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Zod](https://img.shields.io/badge/Zod-3.24+-3E67B1?style=for-the-badge&logo=zod&logoColor=white)](https://zod.dev/)
 
-> A production-grade SaaS & Financial Analytics Dashboard engineered for high-growth startups and enterprises. Designed to deliver lightning-fast operational clarity, real-time revenue intelligence, customer lifetime metrics, and interactive financial data visualization.
+> An accessible, beautifully animated, production-ready **Multi-Step Workspace Onboarding Wizard** built with **Vite**, **React (TypeScript)**, **Tailwind CSS**, and strict **Zod** validation. Engineered for modern SaaS products demanding high-conversion onboarding flows with seamless state management.
 
 ---
 
-## 🌐 Live Demo & Preview
+## 🔗 Live Demo
 
-- **Live Deployment:** [https://nexus-cloud-analytics.vercel.app](https://nexus-cloud-analytics.vercel.app) *(Demo Placeholder)*
+- **Live Deployment:** [https://nexus-workspace-onboarding.vercel.app](https://nexus-workspace-onboarding.vercel.app) *(Live Demo)*
 - **GitHub Repository:** [https://github.com/Dlanka/nexus-cloud](https://github.com/Dlanka/nexus-cloud)
 
 ---
 
-## ✨ Key Architectural Features
+## ✨ Core Highlights
 
-- 📊 **Real-Time Revenue & Financial Metrics:** Instant visibility into MRR, ARR, churn rate, ARPU, and conversion velocity with dynamic delta percentage indicators (positive/negative trends).
-- 📈 **Interactive Area & Cohort Charts:** Granular revenue forecasting with custom glassmorphism tooltips, crosshairs, gradient fills, and seamless time-range filtering (`7D`, `30D`, `90D`, `1Y`, `ALL`).
-- 🔍 **Filterable, Searchable Data Tables:** High-performance transaction logs and customer subscription registries featuring debounced search, status pills, multi-column sorting, and responsive pagination.
-- 🎨 **Dark-Mode First Modern UI:** Built with precision using Zinc-950 palettes, glassmorphic cards, subtle border highlights, and crisp typography for high-density SaaS workflows.
-- 🛡️ **Type-Safe & Scalable Architecture:** Strictly typed components, data contracts, and validation schemas ensuring zero runtime type drift.
-
----
-
-## 🛠️ Tech Stack
-
-| Layer | Technology | Description |
-| :--- | :--- | :--- |
-| **Framework** | [Next.js / React](https://nextjs.org/) | Hybrid Server/Client rendering, App Router & optimal bundling |
-| **Language** | [TypeScript](https://www.typescriptlang.org/) | End-to-end type safety & developer ergonomics |
-| **Styling** | [Tailwind CSS](https://tailwindcss.com/) | Utility-first CSS engine with dark mode primitives |
-| **UI Components** | [Shadcn UI](https://ui.shadcn.com/) / Radix UI | Accessible, composable, and unstyled headless primitives |
-| **Icons** | [Lucide React](https://lucide.dev/) | Clean, consistent, and tree-shakeable iconography |
-| **Charting Library** | [Recharts](https://recharts.org/) / SVG Charts | Composable SVG area, bar, and linear analytics charts |
-| **Animations** | [Framer Motion](https://www.framer.com/motion/) | Fluid layout transitions and micro-interactions |
+- 🔄 **Persistent Multi-Step Form State:** Form values remain preserved across back-and-forth step navigation via React Hook Form and context-based state management.
+- 🛡️ **Strict Schema-Based Validation:** Powered by Zod and `@hookform/resolvers/zod` with step-by-step trigger checks and clear inline error alerts.
+- 🎬 **Fluid Directional Transitions:** Smooth slide-and-fade page transitions driven by Framer Motion's `AnimatePresence` with directional awareness.
+- 👥 **Dynamic Field Arrays:** Real-time adding and removing of team member invitations with individual role selection and duplicate email prevention.
+- 🎊 **Celebration Flow & Provisioning:** Simulated cloud provisioning sequence culminating in multi-burst celebration fireworks powered by `canvas-confetti`.
+- 🧭 **Segmented Stepper Navigation:** Interactive step indicator with mathematically centered connector lines and animated completion gradients.
+- 🌙 **Modern Dark UI Design:** Tailored with a deep Zinc-950 palette, ambient backdrop glows, glassmorphic cards, and crisp typography.
 
 ---
 
-## 📂 Project Structure
+## 🛠️ Tech Stack Breakdown
 
-```text
-nexus-cloud/
-├── public/                  # Static assets (favicons, SVG badges, logos)
-├── src/
-│   ├── assets/              # Static media and vector graphics
-│   ├── components/
-│   │   ├── charts/          # Interactive Area, Bar & Metric charts
-│   │   ├── dashboard/       # Metric cards, revenue feeds, summaries
-│   │   ├── tables/          # Searchable, paginated transaction tables
-│   │   ├── ui/              # Shadcn & custom atomic UI primitives (Button, Card, Input)
-│   │   └── wizard/          # Multi-step onboarding and setup flows
-│   ├── data/                # Mock financial data feeds & analytics constants
-│   ├── hooks/               # Custom hooks (useMetrics, useFilter, usePagination)
-│   ├── schema/              # Zod validation schemas for forms & mutations
-│   ├── types/               # TypeScript interfaces & financial type definitions
-│   ├── utils/               # Formatting helpers, currency converters, cn utility
-│   ├── App.tsx              # Main dashboard view application container
-│   └── main.tsx             # Application bootstrap entrypoint
-├── package.json             # Scripts & dependency definitions
-├── tsconfig.json            # Strict TypeScript compiler options
-└── vite.config.ts           # Vite / Bundler configuration
-```
+| Tool / Library | Purpose |
+| :--- | :--- |
+| **React 19** | Component-driven UI architecture |
+| **TypeScript** | Type-safe form definitions, component props, and validation schemas |
+| **Vite 6** | Ultra-fast build tool and local development server |
+| **Tailwind CSS v4** | Utility-first styling with dark-mode first aesthetic |
+| **React Hook Form** | Performant, uncontrolled form state management with minimal re-renders |
+| **Zod** | Declarative TypeScript-first schema validation |
+| **Framer Motion** | Directional slide animations, layout transitions, and micro-interactions |
+| **Canvas Confetti** | High-performance particle confetti celebration effects |
+| **Lucide React** | Clean and consistent modern iconography |
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Quick Start Guide
 
-Follow these steps to run the project locally on your machine.
+Get the project running locally in a few simple steps:
 
 ### 1. Clone the repository
 ```bash
@@ -88,21 +64,28 @@ npm install
 ```bash
 npm run dev
 ```
-
-Open [http://localhost:5173](http://localhost:5173) in your browser to view the application.
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ### 4. Build for production
 ```bash
 npm run build
 ```
 
-### 5. Preview the production build
+### 5. Preview the production build locally
 ```bash
 npm run preview
 ```
 
 ---
 
+## 👤 Author & Contact
+
+- **Author:** [Dlanka](https://github.com/Dlanka)
+- **Project Link:** [https://github.com/Dlanka/nexus-cloud](https://github.com/Dlanka/nexus-cloud)
+- **Inquiries:** Feel free to open an issue or pull request for contributions and suggestions!
+
+---
+
 ## 📄 License
 
-This project is open-source software licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
